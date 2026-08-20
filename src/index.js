@@ -26,6 +26,8 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ message: "Erro interno do servidor." })
 })
 
+console.log("FRONTEND_URL lido pelo processo:", JSON.stringify(process.env.FRONTEND_URL))
+
 const PORT = process.env.PORT || 5000
 
 connectDB()
